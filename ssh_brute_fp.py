@@ -3,10 +3,7 @@ import sys
 from returns.result import Success, Failure
 from pwn import *
 
-if (len(sys.argv[1]) or
-    len(sys.argv[2]) or 
-    len(sys.argv[3]) or
-    len(sys.argv[4])) == 0:
+if len([arg for arg in sys.argv]) < 5:
     print("One or more arguments are empty")
     exit()
 
