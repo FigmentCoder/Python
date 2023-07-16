@@ -45,7 +45,7 @@ def tryBruteForce(
         attempts = 1
         for password in openFile(fileName):
             print(
-                "[{}]Attempting password: '{}'"
+                "[{}] Attempting password: '{}'"
                     .format(attempts, password))
             connection = tryConnect(host, user, password, timeOut)
             match connection:
