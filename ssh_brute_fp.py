@@ -43,7 +43,7 @@ def tryBruteForce(
         user:string,
         fileName:string,
         timeOut:int):
-        attempts = 1
+        attempts = 1    
         for password in tryOpenFile(fileName):
             match password:
                 case Success(password):
