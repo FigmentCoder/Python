@@ -1,7 +1,7 @@
 import sys
 from pwn import *
 
-if len([arg for arg in sys.argv]) < 5:
+if len([arg for arg in sys.argv]) != 5:
     print("One or more arguments are empty")
     exit()
 
