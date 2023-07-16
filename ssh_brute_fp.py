@@ -51,7 +51,7 @@ def tryBruteForce(
             match password:
                 case Success(password):
                     print(
-                    "Attempting password: '{}'"
+                    "[{}]Attempting password: '{}'"
                         .format(attempts, password))
                     match tryConnect(host, user, password, timeOut):
                         case Success(value):
