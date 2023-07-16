@@ -34,8 +34,8 @@ def tryConnect(
 
 def tryOpenFile(fileName:string):
     try:
-        with open (fileName, "r") as value:
-            for value in value:
+        with open (fileName, "r") as values:
+            for value in values:
                 value = value.strip("\n")
                 yield Success(value)
     except Exception as exception:
