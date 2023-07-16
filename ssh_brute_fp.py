@@ -38,7 +38,7 @@ def tryOpenFile(fileName:string):
     except Exception as exception:
         yield Failure(exception)
 
-def tryBruteForce(
+def bruteForce(
         host:string,
         user:string,
         fileName:string,
@@ -60,4 +60,4 @@ def tryBruteForce(
                 case Failure(password):
                     print(password)
 
-tryBruteForce(host, user, fileName, timeOut)
+bruteForce(host, user, fileName, timeOut)
