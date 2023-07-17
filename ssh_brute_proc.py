@@ -39,19 +39,22 @@ def tryBruteForce(
         fileName:string,
         timeOut:int):
     try:
-        attempts = 1
-        for password in openFile(fileName):
+        for attempts, password in enumerate(
+            openFile(fileName)):
             print(
                 "[{}] Attempting password: '{}'"
                     .format(attempts, password))
-            connection = tryConnect(host, user, password, timeOut)
+            connection = tryConnect(
+                host,
+                user,
+                password,
+                timeOut)
             match connection:
                 case "Connected":
                     print(connection)
                     break
                 case _:
                     print(connection)
-            attempts += 1
     except Exception as exception:
         print(exception)
 

@@ -43,20 +43,23 @@ def bruteForce(
         user:string,
         fileName:string,
         timeOut:int):
-        attempts = 1    
-        for password in tryOpenFile(fileName):
+        for attempts, password in enumerate(
+            tryOpenFile(fileName)):
             match password:
                 case Success(password):
                     print(
                     "[{}] Attempting password: '{}'"
                         .format(attempts, password))
-                    match tryConnect(host, user, password, timeOut):
+                    match tryConnect(
+                        host,
+                        user,
+                        password,
+                        timeOut):
                         case Success(value):
                             print(value)
                             break
                         case Failure(value):
                             print(value)
-                    attempts += 1
                 case Failure(password):
                     print(password)
 
