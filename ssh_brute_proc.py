@@ -8,7 +8,7 @@ if len([arg for arg in sys.argv]) != 5:
 host = sys.argv[1]
 user = sys.argv[2]
 fileName = sys.argv[3]
-timeOut = sys.argv[4]\
+timeOut = sys.argv[4]
 
 Connected = "Connected"
 
