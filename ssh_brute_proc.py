@@ -51,7 +51,7 @@ def tryBruteForce(
                 user,
                 password,
                 timeOut)
-            print (connection)
+            print(connection)
             if connection == Connected:
                 break
     except Exception as exception:
