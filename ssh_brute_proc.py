@@ -2,7 +2,7 @@ import sys
 from pwn import *
 
 if len([arg for arg in sys.argv]) != 5:
-    print("One or more arguments are empty")
+    print("Invalid number of arguments")
     exit()
 
 host = sys.argv[1]
